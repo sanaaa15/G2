@@ -41,4 +41,4 @@ On some devices, you might need ot manually install ChromeDriver.
 
 
 ## Note
-For demonstration purposes, we have restricted ourselves to extracting only 30 products in some parts of the code. With just a few changes in code, we have the scaled up version as well
+For demonstration purposes, we have restricted ourselves to extracting only a small number of products in some parts of the code. With just a few changes in code, we have the scaled-up version as well.
