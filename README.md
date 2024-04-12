@@ -37,7 +37,7 @@ Run the main.py file:
 python main.py
 ```
 On some devices, you might need ot manually install ChromeDriver.
-[ChromeDriver Installation Instructions]([https://sites.google.com/chromium.org/driver/](https://chromedriver.chromium.org/downloads))
+[ChromeDriver Installation Instructions](https://chromedriver.chromium.org/downloads)
 
 
 ## Note
