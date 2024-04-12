@@ -1,5 +1,6 @@
 import subprocess
 import os
+import g2
 
 import praw
 import google.generativeai as genai
@@ -31,6 +32,9 @@ def display_menu():
 
 # Welcome message
 print("Welcome to Product Discovery Tool!")
+print("Fetching products from g2.com...")
+print("Press 1 to stop...")
+g2.fetch_products()
 
 # Display the menu and handle user input
 while True: 

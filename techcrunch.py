@@ -24,15 +24,6 @@ urls = [
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 
-# Function to check if a product name exists in a CSV file
-def product_exists_in_csv(product_name, csv_file):
-    with open(csv_file, 'r') as file:
-        reader = csv.reader(file)
-        for row in reader:
-            if product_name in row:
-                return True
-    return False
-
 # Check if new_product.csv exists, create it if not
 if not os.path.exists("new_products.csv"):
     with open("new_products.csv", "w", newline='') as new_product_file:
@@ -85,17 +76,19 @@ for url in urls:
                 description_response = model.generate_content(description_prompt)
                 description_name = description_response.text.strip()
 
+                # Print the potential product name (optional)
+                print("Potential Product Name:", potential_product_name)
+                print("Description:", description_name)
+
                 # Check if "b2b" is present in product_type and potential product name is not None
                 if "b2b" in product_type.lower() and potential_product_name != "None":
-                    # Check if product name exists in both products.csv and new_products.csv
-                    if not product_exists_in_csv(potential_product_name, "products.csv") and not product_exists_in_csv(potential_product_name, "new_products.csv"):
-                        # Append potential product name and description to new_products.csv
-                        with open("new_products.csv", "a", newline='') as new_product_file:
-                            writer = csv.writer(new_product_file)
-                            writer.writerow([potential_product_name, description_name])
-                        
-                        # Increment the product count
-                        product_count += 1
+                    # Append potential product name and description to new_products.csv
+                    with open("new_products.csv", "a", newline='') as new_product_file:
+                        writer = csv.writer(new_product_file)
+                        writer.writerow([potential_product_name, description_name])
+                    
+                    # Increment the product count
+                    product_count += 1
             except StaleElementReferenceException:
                 print(f"Skipping URL: {href} - Stale element reference: stale element not found")
                 continue
