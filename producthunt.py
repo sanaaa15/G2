@@ -6,7 +6,7 @@ from playwright.async_api import async_playwright
 import google.generativeai as genai
 
 # Set the API key directly in the script
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyCCemIFkG96pJ1wqKVScS0ygADpngsrBJc'
+os.environ['GOOGLE_API_KEY'] = 'AIzaSyA2NML5oE2_TiF7gLY72pmsf0WcLZ0NRUE'
 
 # Configure the SDK with the API key
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
