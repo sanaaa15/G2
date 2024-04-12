@@ -32,6 +32,12 @@ Install the necessary dependencies by running:
 pip install -r requirements.txt
 playwright install
 ```
+Run the main.py file:
+```bash
+python main.py
+```
+On some devices, you might need ot manually install ChromeDriver.
+[ChromeDriver Installation Instructions]([https://sites.google.com/chromium.org/driver/](https://chromedriver.chromium.org/downloads))
 
 
 ## Note
