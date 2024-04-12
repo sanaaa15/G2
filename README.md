@@ -25,3 +25,10 @@ We explore specific sections on Product Hunt, including work productivity, finan
 3. **Extraction and Comparison:** Upon selecting a source, the tool will extract new products from that platform while comparing them with the products extracted from G2.com. It will then display the number of new products found and save them to a CSV file.
 
 4. **Repeat Process:** You can repeat the process by returning to the main menu and selecting a different source. This allows for continuous exploration of new products across various platforms.
+
+## Installation
+Install the necessary dependencies by running:
+```bash
+pip install -r requirements.txt
+playwright install
+```
