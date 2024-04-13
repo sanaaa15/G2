@@ -36,7 +36,7 @@ Run the main.py file:
 ```bash
 python main.py
 ```
-On some devices, you might need ot manually install ChromeDriver.
+On some devices, you might need to manually install ChromeDriver.
 [ChromeDriver Installation Instructions](https://chromedriver.chromium.org/downloads)
 
 
