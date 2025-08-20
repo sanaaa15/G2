@@ -5,8 +5,7 @@ import msvcrt
 
 # API endpoint and API key
 API_ENDPOINT = "https://data.g2.com/api/v1/products"
-API_KEY = "376616154f49d1aff0a7a529dc66732eda1edcf0b1643e829722d1d9f0c939d2"
-
+API_KEY = "YOUR KEY"
 # Set the API key in the request headers
 headers = {
     "Authorization": f"Token token={API_KEY}",
@@ -69,5 +68,6 @@ def fetch_products():
             if response.headers.get('X-RateLimit-Limit') and int(response.headers['X-RateLimit-Limit']) <= 100:
                 print("Rate limit close to being exceeded. Sleeping for 1 second to ensure compliance...")
                 time.sleep(1)
+
 
     return products
